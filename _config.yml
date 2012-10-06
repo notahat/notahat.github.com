@@ -1,0 +1,11 @@
+# Match github's enforced settings
+safe:     true
+lsi:      false
+pygments: true
+
+# Make running locally easier
+server: true
+auto:   true
+
+# Date format used in posts
+date_format: "%B %e, %Y"
