@@ -20,6 +20,8 @@ h1, h2, h3 {
 
 p { text-size: 15px; line-height: 25px; margin: 25px 0; }
 
+ul { margin: 25px 0; }
+
 img { border: 1px solid #cccccc; padding: 5px; margin: 25px 0; }
 
 a {
@@ -28,6 +30,8 @@ a {
   text-decoration: none;
   &:hover { text-decoration: underline; }
 }
+
+
 
 
 /* Page header styling */
@@ -41,7 +45,7 @@ body > header {
   border-radius: 0 4px 4px 0;
   position: fixed; top: 40px; left: 0px;
 
-  a { color: #fdfdfb; }
+  a { color: #fdfdfb; text-decoration: underline; }
 
   h1 {
     font-size: 30px;
@@ -72,6 +76,26 @@ div.content {
   }
 
   h2 { font-size: 24px; }
+
+  div.about_page_heading {
+    border-bottom: 1px solid #cccccc;
+
+    h1 { border: none; margin-bottom: 0; }
+    ul { margin: 10px 0 15px 0; }
+    li { display: inline; }
+
+    a {
+      display: inline-block;
+      height: 24px;
+      background-repeat: no-repeat;
+      padding-left: 30px;
+      width: 60px;
+    }
+
+    a.github { background-image: url(/images/glyphicons_381_github.png); }
+    a.twitter { background-image: url(/images/glyphicons_392_twitter.png); }
+    a.flickr { background-image: url(/images/glyphicons_395_flickr.png); }
+  }
 }
 
 
@@ -79,8 +103,8 @@ div.content {
 
 body > footer {
   position: fixed; bottom: 40px; left: 40px;
-  font-size: 12px;
-  color: #888888;
+  font-size: 12px; color: #888888;
+  width: 180px;
 }
 
 
@@ -98,6 +122,7 @@ body > footer {
 
   body > footer {
     position: static;
+    width: auto;
   }
 }
 
