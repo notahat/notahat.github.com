@@ -9,6 +9,9 @@ body {
   -webkit-text-size-adjust: 100%; // Prevent text getting rescaled on the iPhone.
 }
 
+
+/* Global styling */
+
 h1, h2, h3 {
   font-family: "Arvo", Monaco, serif;
   font-weight: 400;
@@ -16,6 +19,18 @@ h1, h2, h3 {
 }
 
 p { text-size: 15px; line-height: 25px; margin: 25px 0; }
+
+img { border: 1px solid #cccccc; padding: 5px; margin: 25px 0; }
+
+a {
+  color: #c30000;
+  font-weight: 200;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+
+/* Page header styling */
 
 body > header {
   display: block;
@@ -26,14 +41,19 @@ body > header {
   border-radius: 0 4px 4px 0;
   position: fixed; top: 40px; left: 0px;
 
+  a { color: #fdfdfb; }
+
   h1 {
     font-size: 30px;
     a {
-      color: #FDFDFB; text-decoration: none;
+      text-decoration: none;
       &:hover { text-decoration: underline; }
     }
   }
 }
+
+
+/* Page content styling */
 
 div.content {
   h1, h2, h3 {
@@ -53,6 +73,9 @@ div.content {
 
   h2 { font-size: 24px; }
 }
+
+
+/* Page footer styling */
 
 body > footer {
   position: fixed; bottom: 40px; left: 40px;
