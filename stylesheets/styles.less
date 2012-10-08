@@ -20,7 +20,10 @@ h1, h2, h3 {
 
 p { text-size: 15px; line-height: 25px; margin: 25px 0; }
 
-ul { margin: 25px 0; }
+ul {
+  margin: 25px 0;
+  li { list-style: inside; padding-left: 25px; }
+}
 
 img { border: 1px solid #cccccc; padding: 5px; margin: 25px 0; }
 
@@ -31,7 +34,38 @@ a {
   &:hover { text-decoration: underline; }
 }
 
+a.button {
+  display: inline-block;
+  color: white;
+  font-weight: normal;
 
+  background: #171717 url(/images/arrow-down.png) no-repeat 8px 7px;
+  background-size: 12px auto;
+
+	padding: 4px 10px 4px 29px;
+	border-radius: 4px;
+
+  &:hover { background-color: #950119; }
+}
+
+em { font-style: italic; }
+strong { font-weight: 700; }
+
+dl.software_details {
+  display: block;
+  overflow: hidden;
+  margin: 25px 0;
+
+  dt {
+    font-weight: bold;
+    float: left;
+    width: 120px;
+  }
+
+  dd {
+    margin-left: 120px;
+  }
+}
 
 
 /* Page header styling */
@@ -82,7 +116,7 @@ div.content {
 
     h1 { border: none; margin-bottom: 0; }
     ul { margin: 10px 0 15px 0; }
-    li { display: inline; }
+    li { display: inline; list-style: none; padding: 0;}
 
     a {
       display: inline-block;
@@ -95,6 +129,14 @@ div.content {
     a.github { background-image: url(/images/glyphicons_381_github.png); }
     a.twitter { background-image: url(/images/glyphicons_392_twitter.png); }
     a.flickr { background-image: url(/images/glyphicons_395_flickr.png); }
+  }
+
+  div.software_page_heading {
+    border-bottom: 1px solid #cccccc;
+
+    h1 { border: none; margin-bottom: 0; }
+
+    a.button { margin: 5px 10px 15px 0; }
   }
 }
 
