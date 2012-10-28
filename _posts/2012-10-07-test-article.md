@@ -1,6 +1,7 @@
 ---
 title: Test Article
 layout: post
+published: false
 ---
 
 Just needed something to do some layout testing, so here's some [hipster ipsum](http://hipsteripsum.me) for you:
