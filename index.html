@@ -10,7 +10,7 @@ title: Not a Hat
       <time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: site.date_format }}</time>
     </header>
 
-    {{ post.content }}
+    {{ post.excerpt | markdownify }}
   </article>
 {% endfor %}
 

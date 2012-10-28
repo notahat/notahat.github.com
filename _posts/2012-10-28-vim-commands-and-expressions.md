@@ -1,9 +1,10 @@
 ---
 title: Vim Script for Programmers
 layout: post
+excerpt: The rules and grammar of Vim script can be a little confusing for programmers used to other languages. This post will help you get your head around them.
 ---
 
-The rules and grammar of Vim script can be a little confusing for programmers used to other languages. This post will help you get your head around them.
+{{ page.excerpt }}
 
 
 ## Expressions
