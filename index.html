@@ -3,16 +3,33 @@ layout: page
 title: Not a Hat
 ---
 
-{% for post in site.posts %}
-  <article>
-    <header>
-      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      <time datetime="{{ post.date | date: "%F" }}">{{ post.date | date: site.date_format }}</time>
-    </header>
+<div class="home_page">
+  <section>
+    <h1>Hi, I'm Pete Yandell</h1>
 
-    {{ post.excerpt | markdownify }}
+    <p>I write software. Everything from <a href="http://themeforest.net">big web sites</a>, to rocket telemetry systems, to DDoS defence systems.</p>
 
-    <p><a href="{{ post.url }}">Read more</a></p>
-  </article>
-{% endfor %}
+    <p>More than that, I help teams get better at building software. Put me in a room with some coders and some great product folks, and I'll make sure the software that gets built does its job well, and keeps adapting to change for a long time to come.</p>
+
+    <p>In my spare time I ride bicycles a lot, and catch penguins. (Ask me how!)</p>
+
+    <ul class="social_media_links">
+      <li><a href="https://twitter.com/notahat" class="twitter">Twitter</a></li>
+      <li><a href="http://www.flickr.com/photos/notahat" class="flickr">Flickr</a></li>
+      <li><a href="https://github.com/notahat" class="github">GitHub</a></li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h1>Blog Posts</h1>
+
+    {% for post in site.posts %}
+      <article>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {{ post.excerpt | markdownify }}
+      </article>
+    {% endfor %}
+  </section>
+</div>
 
