@@ -31,7 +31,7 @@ The same goes for practicing programming. If you want to get better, don't just 
 
 Another thing Corey said during the Code Retreat was, "Today is the day to go too far."
 
-In your day job, you have to be pragmatic about the techniques you use. You don't shoot for 100% test coverage, you don't rigorously TDD everything, you don't follow your [SOLID principles](http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) perfectly.
+In your day job, you have to be pragmatic about the techniques you use. You don't shoot for 100% test coverage, you don't rigorously TDD everything, you don't follow your <a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID principles</a> perfectly.
 
 When you practice, go too far. Take a technique, and use it 100% rigorously. Push the use of it beyond sense and reason. You learn by exploring the boundaries of your skills.
 
