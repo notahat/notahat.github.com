@@ -1,6 +1,7 @@
 ---
 title: Vim Script for Programmers
 layout: post
+published: false
 excerpt: The rules and grammar of Vim script can be a little confusing for programmers used to other languages. This post will help you get your head around them.
 ---
 

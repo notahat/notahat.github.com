@@ -11,6 +11,8 @@ title: Not a Hat
     </header>
 
     {{ post.excerpt | markdownify }}
+
+    <p><a href="{{ post.url }}">Read more</a></p>
   </article>
 {% endfor %}
 
