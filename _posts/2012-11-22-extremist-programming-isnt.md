@@ -14,9 +14,11 @@ A while back I participated in a [Code Retreat](http://coderetreat.org) run by [
 It took a while for the point of this to sink in, and it was a couple of things that Corey said that finally made it click.
 
 
-## Practice doesn't make perfect. Perfect practice makes perfect.
+## Perfect Practice Makes Perfect
 
-I think Corey attributed this to his violin teacher, but it seems to originate from [Vince Lombardi](http://en.wikipedia.org/wiki/Vince_Lombardi).
+I think Corey attributed this to his violin teacher, but it seems to originate from [Vince Lombardi](http://en.wikipedia.org/wiki/Vince_Lombardi):
+
+"Practice does not make perfect. Only perfect practice makes perfect."
 
 If you want to get better at something, don't just do it the way you'd normally do it. Slow it down, try a different approach, be more attentive and thoughtful. Try to do it the ideal way (for some definition of ideal.)
 
