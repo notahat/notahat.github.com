@@ -1,11 +1,12 @@
 @dark_text_color: #232323;
 @page_background_color: #fbfaf7;
+@line_height: 28px;
 
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
   font-weight: 400;
-  line-height: 1.8em;
+  line-height: @line_height;
 	color: @dark_text_color;
 	background-color: @page_background_color;
   margin: 40px 0px 40px 300px;
@@ -37,7 +38,7 @@ h2 { font-size: 22px; }
 
 /* Text */
 
-p { line-height: 25px; margin: 20px 0; }
+p { margin: @line_height 0; }
 em { font-style: italic; }
 strong { font-weight: 600; }
 
