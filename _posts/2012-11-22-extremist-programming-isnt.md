@@ -29,15 +29,6 @@ If I'm playing something badly, and all I do in practice is play it badly over a
 The same goes for practicing programming. If you want to get better, don't just do the same thing you do in your day job. Slow it down, try different techniques, think about what you're doing, repeat the same thing over but in different ways, with different techniques and constraints.
 
 
-## Go Too Far
-
-Another thing Corey said during the Code Retreat was, "Today is the day to go too far."
-
-In your day job, you have to be pragmatic about the techniques you use. You don't shoot for 100% test coverage, you don't rigorously TDD everything, you don't follow your <a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID principles</a> perfectly.
-
-When you practice, go too far. Take a technique, and use it 100% rigorously. Push the use of it beyond sense and reason. You learn by exploring the boundaries of your skills.
-
-
 ## No Extremism Required
 
 I think it's telling that the idea of deliberate practice is so alien to most developers that Edward Z. Yang feels it is "extremist". Computing is a very young discipline. We still haven't figured out how to build software well, which means that even the very best developers still have a lot to learn. Nobody is above practice.
