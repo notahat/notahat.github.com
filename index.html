@@ -20,18 +20,6 @@ title: Not a Hat
 
 
   <section>
-    <h1>Blog Posts</h1>
-
-    {% for post in site.posts %}
-      <article>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        {{ post.excerpt | markdownify }}
-      </article>
-    {% endfor %}
-  </section>
-
-
-  <section>
     <h1>Projects</h1>
 
     <h2>Ruby</h2>
@@ -53,7 +41,19 @@ title: Not a Hat
       <dt><a href="/simplesynth">SimpleSynth</a></dt>
         <dd>A small, fast synth, for trying out musical ideas quickly.</dd>
     </dl>
-
   </section>
+
+
+  <section>
+    <h1>Blog Posts</h1>
+
+    {% for post in site.posts %}
+      <article>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {{ post.excerpt | markdownify }}
+      </article>
+    {% endfor %}
+  </section>
+
 </div>
 
