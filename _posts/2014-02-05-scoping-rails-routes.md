@@ -5,7 +5,7 @@ published: true
 excerpt: A cheat-sheet on using `namespace` and `scope` for organising routes
 ---
 
-I always forget how `namespace` and `scope` in the routes file affect the controller names, URIs, and name routes.
+I always forget how `namespace` and `scope` in the Rails routes file affect the controller names, URIs, and named routes.
 
 
 ## Scope
