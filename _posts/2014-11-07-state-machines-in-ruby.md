@@ -4,6 +4,8 @@ layout: post
 published: true
 ---
 
+**Update**: Added exceptions for non-existent transitions, and cleaned up a bit.
+
 I'm not a fan of the currently popular Ruby state machine gems ([state_machine](https://github.com/pluginaweek/state_machine), [AASM](https://github.com/aasm/aasm)). State machines are simple, and these are complicated gems with large APIs.
 
 I had a tinker with implementing the simplest state machine I could in Ruby, with just the features I needed. What follows is what fell out of that tinkering. It's all in roughly hand-tested form, so it comes with no warranty of any kind. I might expand this into a gem at some point.
@@ -30,12 +32,20 @@ We can make the transition table behave like that pretty easily:
 
 {% highlight ruby %}
 class TransitionTable
+  class TransitionError < RuntimeError
+    def initialize(state, input)
+      super "No transition from state #{state.inspect} for input #{input.inspect}"
+    end
+  end
+
   def initialize(transitions)
     @transitions = transitions
   end
 
   def call(state, input)
-    @transitions[[state, input]]
+    @transitions.fetch([state, input])
+  rescue KeyError
+    raise TransitionError.new(state, input)
   end
 end
 {% endhighlight %}
@@ -118,7 +128,6 @@ class GraphvizFormatter
     edges = transition_table.map do |current_state, input, next_state, output|
       %{  "#{escape(current_state)}" -> "#{escape(next_state)}" [ label=" #{escape(input)}/#{escape(output)}" ]}
     end
-
     [HEADER, *edges, FOOTER].join("\n")
   end
 
@@ -137,11 +146,7 @@ class TransitionTable
   include Enumerable
 
   def each
-    @transitions.each_pair do |key, value|
-      current_state, input  = *key
-      next_state,    output = *value
-      yield current_state, input, next_state, output
-    end
+    @transitions.each_pair {|key, value| yield *key, *value }
   end
 end
 {% endhighlight %}
@@ -154,6 +159,5 @@ Throwing this and [Graphviz](http://www.graphviz.org) at the above transition ta
 
 There are a bunch more things I'd like to tinker with:
 
-- Raising exceptions for unhandled inputs
 - Nested state machines
 - Triggering output on entering or leaving states
