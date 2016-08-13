@@ -1,7 +1,7 @@
 ---
 title: Extremist Programming Isn't
 layout: post
-published: true
+published: false
 excerpt: What Edward Z. Yang calls "[Extremist Programming](http://blog.ezyang.com/2012/11/extremist-programming/)", I call "practice".
 ---
 

@@ -24,29 +24,20 @@ title: Not a Hat
 
 
   <section>
-    <h1>Open Source</h1>
+    <h1>Occasional Writing</h1>
 
-    <h2>Ruby</h2>
+    <ul class="post_list">
+      {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="post_date">{{ post.date | date: "%-d %b %Y" }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
 
-    <dl>
-      <dt><a href="https://github.com/envato/awsraw">AWSRaw</a></dt>
-        <dd>A lean client for AWS, implemented as Faraday middleware </dd>
-      <dt><a href="https://github.com/envato/fake_aws">FakeAWS</a></dt>
-        <dd>A subset of AWS as a Rack app, for dev and testing</dd>
-      <dt><a href="https://github.com/notahat/finer_struct">FinerStruct</a></dt>
-        <dd>A nicer replacement for Ruby's Struct and OpenStruct</dd>
-      <dt><a href="http://github.com/notahat/machinist">Machinist</a></dt>
-        <dd>A factory gem with a clean syntax</dd>
-    </dl>
+  <section>
+    <h1>Old Mac Apps</h1>
 
-    <h2>Vim</h2>
-
-    <dl>
-      <dt><a href="https://github.com/notahat/vim-redub">Redub</a></dt>
-        <dd>Better file moving and renaming</dd>
-    </dl>
-
-    <h2>Mac</h2>
+    <p>Years ago I wrote a couple of OS X music apps that some folks still
+    use.</p>
 
     <dl>
       <dt><a href="/midi_patchbay">MIDI Patchbay</a></dt>
@@ -54,17 +45,6 @@ title: Not a Hat
       <dt><a href="/simplesynth">SimpleSynth</a></dt>
         <dd>A small, fast synth, for trying out musical ideas quickly.</dd>
     </dl>
-  </section>
-
-
-  <section>
-    <h1>Writing</h1>
-
-    <ul class="post_list">
-      {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="post_date">{{ post.date | date: "%-d %b %Y" }}</span></li>
-      {% endfor %}
-    </ul>
   </section>
 
 </div>
