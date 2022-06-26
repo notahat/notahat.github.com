@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,9 +12,7 @@
     />
     <title>Pete Yandell — Principal Engineer / Architect</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    {% include favicons.html %}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,10 +23,10 @@
 
     <style>
       body {
-        color: white;
-        background-color: #242424;
         margin: 20px;
         max-width: 960px;
+        color: white;
+        background-color: #242424;
       }
 
       a {
@@ -56,15 +57,15 @@
       }
 
       main {
-        margin-bottom: 32px;
+        margin-bottom: 0 0 32px 0;
       }
 
       main p {
+        margin: 0 0 20px 0;
         font-family: "Roboto Mono", monospace;
         font-weight: 300;
         font-size: 16px;
         line-height: 28px;
-        margin: 0 0 20px 0;
       }
 
       nav a {
