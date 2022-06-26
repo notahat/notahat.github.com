@@ -1,0 +1,51 @@
+---
+title: Articles
+description: TODO write a description
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ page.description }}" />
+    <title>Not a Hat &mdash; {{ page.title }}</title>
+
+    {% include favicons.html %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Quattrocento+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/articles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="site-nav"><a href="/">About me</a></nav>
+
+    <main class="articles">
+      <header class="articles__header">
+        <h1 class="articles__heading">Articles</h1>
+
+        <p class="articles__intro">Sometimes I write things. Here they are.</p>
+      </header>
+
+      <ul class="articles__list">
+        {% for post in site.posts %}
+        <li class="articles__row">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <time
+            class="articles__date"
+            datetime="{{ page.date | date: '%Y-%m-%d' }}"
+          >
+            {{ post.date | date_to_string: "ordinal", "US" }}
+          </time>
+        </li>
+        {% endfor %}
+      </ul>
+    </main>
+  </body>
+</html>

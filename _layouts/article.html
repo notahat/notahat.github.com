@@ -1,0 +1,44 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ page.description }}" />
+    <title>Not a Hat &mdash; {{ page.title }}</title>
+
+    {% include favicons.html %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Quattrocento+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/articles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="site-nav">
+      <a href="/">About me</a>
+      <a href="/articles">Other articles</a>
+    </nav>
+
+    <article class="article">
+      <header class="article__header">
+        <h1 class="article__headline">{{ page.title }}</h1>
+        <time
+          class="article__date"
+          datetime="{{ page.date | date: '%Y-%m-%d' }}"
+        >
+          {{ page.date | date_to_string: "ordinal", "US" }}
+        </time>
+      </header>
+
+      {{ content }}
+    </article>
+  </body>
+</html>

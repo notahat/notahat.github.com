@@ -1,0 +1,141 @@
+---
+---
+// ----------------------------------------------------------------------
+// Site-wide stuff
+
+html {
+  background-color: white;
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+body {
+  margin: 1rem;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: #4588bb;
+  }
+}
+
+nav.site-nav {
+  display: flex;
+  gap: 1rem;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// ----------------------------------------------------------------------
+// Articles page
+
+main.articles {
+  margin: 2rem auto;
+  max-width: 576px;
+}
+
+header.articles__header {
+  margin-bottom: 2.5rem;
+}
+
+h1.articles__heading {
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  font-size: 42px;
+  font-weight: 500;
+  text-align: center;
+}
+
+p.articles__intro {
+  margin: 0;
+  text-align: center;
+}
+
+ul.articles__list {
+  margin: 0;
+  padding: 0;
+}
+
+li.articles__row {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+time.articles__date {
+  flex-shrink: 0;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// ----------------------------------------------------------------------
+// Article pages
+
+header.article__header {
+  margin: 0 0 3rem 0;
+}
+
+h1.article__headline {
+  margin: 0 0 16px 0;
+  text-align: center;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+time.article__date {
+  display: block;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+article.article {
+  margin: 2rem auto;
+  max-width: 576px;
+
+  // We're using nesting rather than BEM here, coz these tags are all generated from Markdown.
+  p {
+    margin: 0;
+    text-align: justify;
+    line-height: 1.5;
+
+    + p {
+      text-indent: 1.5rem;
+    }
+  }
+
+  figure.highlight {
+    // Using both top and bottom margins here, coz we need to space the figure
+    // from the paragraphs that have zero margins.
+    margin: 1rem 0;
+    overflow-x: auto;
+    padding: 0 1.5rem;
+
+    pre {
+      margin: 0;
+    }
+  }
+
+  code {
+    font-family: Menlo, monospace;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  div.gist {
+    margin: 1.5rem 0;
+  }
+}
+
+@import "highlight";
