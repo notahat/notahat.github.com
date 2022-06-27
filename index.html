@@ -1,4 +1,6 @@
 ---
+title: Pete Yandell — Principal Engineer / Architect
+description: Pete Yandell is an experienced Principal Software Engineer and Architect based in Melbourne, Australia.
 ---
 
 <!DOCTYPE html>
@@ -6,11 +8,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Pete Yandell is an experienced Principal Software Engineer and Architect based in Melbourne, Australia."
-    />
-    <title>Pete Yandell — Principal Engineer / Architect</title>
+    <meta name="description" content="{{ page.description }}" />
+    <title>{{ page.title }}</title>
 
     {% include favicons.html %}
 
@@ -20,6 +19,8 @@
       href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Roboto+Mono:wght@300&display=swap"
       rel="stylesheet"
     />
+
+    <link href="/css/home_page.css" rel="stylesheet" />
 
     <style>
       body {
@@ -37,35 +38,32 @@
         color: #aaa;
       }
 
-      header {
-        margin-bottom: 28px;
-      }
-
-      header h1,
+      h1,
       h2 {
         font-family: "Quattrocento Sans", sans-serif;
         font-weight: 400;
         margin: 0;
       }
 
-      header h1 {
+      h1 {
         font-size: 36px;
       }
 
-      header h2 {
+      h2 {
         font-size: 28px;
+        margin-bottom: 28px;
       }
 
-      main {
-        margin-bottom: 0 0 32px 0;
-      }
-
-      main p {
+      p {
         margin: 0 0 20px 0;
         font-family: "Roboto Mono", monospace;
         font-weight: 300;
         font-size: 16px;
         line-height: 28px;
+      }
+
+      main {
+        margin-bottom: 0 0 32px 0;
       }
 
       nav a {
@@ -75,14 +73,12 @@
   </head>
 
   <body>
-    <header>
+    <main>
       <hgroup>
         <h1>Pete Yandell</h1>
         <h2>Principal Engineer / Architect</h2>
       </hgroup>
-    </header>
 
-    <main>
       <p>
         For the past 12 years I've been working at
         <a href="https://envato.com">Envato</a> building products like
