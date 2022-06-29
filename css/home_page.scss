@@ -5,9 +5,6 @@ body {
   max-width: 960px;
   color: white;
   background-color: #242424;
-  font-family: "Roboto Mono", monospace;
-  font-weight: 300;
-  font-size: 16px;
 }
 
 a {
@@ -38,8 +35,11 @@ main {
 }
 
 p {
-  line-height: 28px;
   margin: 0 0 20px 0;
+  line-height: 28px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 nav a {
