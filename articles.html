@@ -27,11 +27,9 @@ description: TODO write a description
     <nav class="site-nav"><a href="/">About me</a></nav>
 
     <main class="articles">
-      <header class="articles__header">
-        <h1 class="articles__heading">Articles</h1>
+      <h1 class="articles__heading">Articles</h1>
 
-        <p class="articles__intro">Sometimes I write things. Here they are.</p>
-      </header>
+      <p class="articles__intro">Sometimes I write things. Here they are.</p>
 
       <ul class="articles__list">
         {% for post in site.posts %}
@@ -41,7 +39,7 @@ description: TODO write a description
             class="articles__date"
             datetime="{{ page.date | date: '%Y-%m-%d' }}"
           >
-            {{ post.date | date_to_string: "ordinal", "US" }}
+            {{ post.date | date_to_long_string: "ordinal", "US" }}
           </time>
         </li>
         {% endfor %}

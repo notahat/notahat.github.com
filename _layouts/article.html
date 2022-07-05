@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Quattrocento+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Quattrocento+Sans&display=swap"
       rel="stylesheet"
     />
 
@@ -27,18 +27,20 @@
       <a href="/articles">Other articles</a>
     </nav>
 
-    <article class="article">
-      <header class="article__header">
-        <h1 class="article__headline">{{ page.title }}</h1>
-        <time
-          class="article__date"
-          datetime="{{ page.date | date: '%Y-%m-%d' }}"
-        >
-          {{ page.date | date_to_string: "ordinal", "US" }}
-        </time>
-      </header>
+    <main class="article">
+      <article>
+        <header class="article__header">
+          <h1 class="article__headline">{{ page.title }}</h1>
+          <time
+            class="article__date"
+            datetime="{{ page.date | date: '%Y-%m-%d' }}"
+          >
+            {{ page.date | date_to_long_string: "ordinal", "US" }}
+          </time>
+        </header>
 
-      {{ content }}
-    </article>
+        {{ content }}
+      </article>
+    </main>
   </body>
 </html>

@@ -1,67 +1,82 @@
 ---
 ---
-// ----------------------------------------------------------------------
-// Site-wide stuff
 
-html {
-  background-color: white;
-  color: black;
+// ----------------------------------------------------------------------
+// Shared stuff
+
+// Below this size, we shrink the page margins.
+// 450px is a little bigger than the iPhone 13 Pro width of 428px.
+$page-margin-breakpoint: 450px;
+
+@mixin serif-font {
   font-family: "Cormorant Garamond", serif;
   font-size: 21px;
   font-weight: 500;
 }
 
-body {
-  margin: 1rem;
-}
-
-a {
-  color: inherit;
-
-  &:hover {
-    color: #4588bb;
-  }
-}
-
-nav.site-nav {
-  display: flex;
-  gap: 1rem;
+@mixin sans-font {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
 
+html {
+  background-color: white;
+  color: black;
+  @include serif-font;
+}
+
+body {
+  margin: 1rem;
+
+  @media (min-width: $page-margin-breakpoint) {
+    margin: 2rem;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-color: #999;
+
+  &:hover {
+    color: #4588bb;
+    text-decoration-color: currentcolor;
+  }
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  @include sans-font;
+}
+
 // ----------------------------------------------------------------------
 // Articles page
 
-main.articles {
+.articles {
   margin: 2rem auto;
   max-width: 576px;
 }
 
-header.articles__header {
-  margin-bottom: 2.5rem;
-}
-
-h1.articles__heading {
+.articles__heading {
   margin: 0 0 1rem 0;
   font-family: inherit;
   font-size: 42px;
-  font-weight: 500;
+  font-weight: inherit;
   text-align: center;
 }
 
-p.articles__intro {
-  margin: 0;
+.articles__intro {
+  margin: 0 0 2.5rem 0;
   text-align: center;
 }
 
-ul.articles__list {
+.articles__list {
   margin: 0;
   padding: 0;
 }
 
-li.articles__row {
+.articles__row {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
@@ -70,21 +85,19 @@ li.articles__row {
   align-items: baseline;
 }
 
-time.articles__date {
+.articles__date {
   flex-shrink: 0;
-  font-family: "Quattrocento Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  @include sans-font;
 }
 
 // ----------------------------------------------------------------------
 // Article pages
 
-header.article__header {
+.article__header {
   margin: 0 0 3rem 0;
 }
 
-h1.article__headline {
+.article__headline {
   margin: 0 0 16px 0;
   text-align: center;
   font-family: inherit;
@@ -92,19 +105,37 @@ h1.article__headline {
   font-weight: 500;
 }
 
-time.article__date {
+.article__date {
   display: block;
-  font-family: "Quattrocento Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  @include sans-font;
   text-align: center;
 }
 
-article.article {
+.article {
   margin: 2rem auto;
   max-width: 576px;
 
   // We're using nesting rather than BEM here, coz these tags are all generated from Markdown.
+
+  h2 {
+    margin: 2rem 0 1rem 0;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: inherit;
+    text-align: center;
+  }
+
+  h3 {
+    margin: 2rem 0 1rem 0;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 700;
+
+    + p {
+      text-indent: 1.5rem;
+    }
+  }
+
   p {
     margin: 0;
     text-align: justify;
@@ -115,15 +146,21 @@ article.article {
     }
   }
 
-  figure.highlight {
-    // Using both top and bottom margins here, coz we need to space the figure
-    // from the paragraphs that have zero margins.
-    margin: 1rem 0;
+  figure.highlight,
+  div.highlight {
+    margin: 1rem -1rem;
+    padding: 0.3rem 1rem 0.5rem 1rem;
     overflow-x: auto;
-    padding: 0 1.5rem;
+    background-color: #f6f6f6;
+
+    @media (min-width: $page-margin-breakpoint) {
+      margin: 1rem -2rem;
+      padding: 0.3rem 2rem 0.5rem 2rem;
+    }
 
     pre {
       margin: 0;
+      padding: 0;
     }
   }
 
