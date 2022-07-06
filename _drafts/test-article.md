@@ -1,5 +1,5 @@
 ---
-title: Test Article with a Nice Long Title
+title: Test Article with an Awkwardly Long Title
 description: A truly great article.
 layout: article
 published: true
