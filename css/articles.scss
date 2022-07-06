@@ -4,6 +4,9 @@
 // ----------------------------------------------------------------------
 // Shared stuff
 
+
+$page-width: 576px;
+
 // Below this size, we shrink the page margins.
 // 450px is a little bigger than the iPhone 13 Pro width of 428px.
 $page-margin-breakpoint: 450px;
@@ -27,10 +30,10 @@ html {
 }
 
 body {
-  margin: 1rem;
+  margin: 1rem 1rem 3rem;
 
   @media (min-width: $page-margin-breakpoint) {
-    margin: 2rem;
+    margin: 2rem 2rem 8rem;
   }
 }
 
@@ -55,7 +58,7 @@ a {
 
 .articles {
   margin: 2rem auto;
-  max-width: 576px;
+  max-width: $page-width;
 }
 
 .articles__heading {
@@ -94,11 +97,11 @@ a {
 // Article pages
 
 .article__header {
-  margin: 0 0 3rem 0;
+  margin: 0 0 3rem;
 }
 
 .article__headline {
-  margin: 0 0 16px 0;
+  margin: 0 0 0.8rem;
   text-align: center;
   font-family: inherit;
   font-size: 2rem;
@@ -113,12 +116,12 @@ a {
 
 .article {
   margin: 2rem auto;
-  max-width: 576px;
+  max-width: $page-width;
 
   // We're using nesting rather than BEM here, coz these tags are all generated from Markdown.
 
   h2 {
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 1rem;
     font-family: inherit;
     font-size: 1.3rem;
     font-weight: inherit;
@@ -126,7 +129,7 @@ a {
   }
 
   h3 {
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 1rem;
     font-size: 1rem;
     font-family: inherit;
     font-weight: 700;
@@ -149,13 +152,13 @@ a {
   figure.highlight,
   div.highlight {
     margin: 1rem -1rem;
-    padding: 0.3rem 1rem 0.5rem 1rem;
+    padding: 0.3rem 1rem 0.5rem;
     overflow-x: auto;
     background-color: #f6f6f6;
 
     @media (min-width: $page-margin-breakpoint) {
       margin: 1rem -2rem;
-      padding: 0.3rem 2rem 0.5rem 2rem;
+      padding: 0.3rem 2rem 0.5rem;
     }
 
     pre {
