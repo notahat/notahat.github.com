@@ -12,7 +12,7 @@ You can read [the source to this site on GitHub](https://github.com/notahat/nota
 
 ## What's Not On The List
 
-I'm sticking to things that I think are applicable to just about all websites.
+I'm sticking to things that are applicable to just about all websites.
 I'm ignoring tools, frameworks, and hosting.
 
 ## The Techniques
@@ -53,7 +53,7 @@ Your site should have favicons in resolutions to suit different devices.
 
 ### Flexbox and Grid
 
-Flexbox and Grid eliminate much of the hackery that used to be needed to lay out pages.
+Flexbox and Grid eliminate much of the hackery in laying out pages.
 [The Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and [The Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) are excellent.
 
 ### Fonts
@@ -142,7 +142,8 @@ Make sure all your pages have:
 
 - A descriptive title
 - A description meta tag
+- Good headings
 - Meaningful, concise content
 - Good performance
 
-See the [Google SEO Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide#understand_your_content) for more good guidance.
+The [Google SEO Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide#understand_your_content) is helpful.
