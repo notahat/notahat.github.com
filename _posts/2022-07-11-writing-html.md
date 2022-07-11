@@ -94,7 +94,7 @@ Be sure to specify your character set in the `head` section:
 
 Understand [Core Web Vitals](https://web.dev/vitals/#core-web-vitals).
 
-Run Lighthouse in the Chrome dev tools, and looks at its performance report.
+Run Lighthouse in the Chrome dev tools, and look at its performance report.
 It'll suggest things you can improve.
 
 ### Prettier
