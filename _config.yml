@@ -10,3 +10,6 @@ timezone: Australia/Melbourne
 
 plugins:
 - jekyll-gist
+
+exclude:
+- README.md
