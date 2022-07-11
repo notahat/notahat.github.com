@@ -149,6 +149,15 @@ a {
     }
   }
 
+  ul {
+    padding-left: 1.5rem;
+    list-style-type: '—';
+  }
+
+  li {
+    line-height: 1.5;
+  }
+
   figure.highlight,
   div.highlight {
     margin: 1rem -1rem;
