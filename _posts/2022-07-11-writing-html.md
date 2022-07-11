@@ -67,7 +67,7 @@ Use the `<link>` method of embedding.
 
 ### HTML Living Standard
 
-We've moved past HTML version numbers, and it's now a [living standard](https://html.spec.whatwg.org/multipage/).
+We've moved past HTML version numbers, and into [the HTML living standard](https://html.spec.whatwg.org/multipage/).
 [Can I Use](https://caniuse.com) helps figure out which HTML features are supported by which browser versions.
 
 To tell browsers that you're adhering to the living standard, always start your document with:
