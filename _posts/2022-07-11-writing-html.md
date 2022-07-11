@@ -2,7 +2,6 @@
 title: Writing HTML
 description: A list of techniques for writing good HTML and CSS.
 layout: article
-published: true
 ---
 
 These are my recommendations for techniques you should use when writing HTML, based on my experience working on sites like [Envato Elements](https://elements.envato.com/).

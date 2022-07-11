@@ -1,8 +1,7 @@
 ---
 title: Scoping Rails Routes
+description: How to use namespace and scope in Rails routes.
 layout: article
-date: 2014-02-05
-published: true
 ---
 
 I always forget how `namespace` and `scope` in the Rails routes file affect the controller names, URIs, and named routes.
