@@ -11,7 +11,7 @@ You can read [the source to this site on GitHub](https://github.com/notahat/nota
 
 ## What's Not On The List
 
-I'm sticking to things that are applicable to just about all websites.
+I'm sticking to things that apply to just about all websites.
 I'm ignoring tools, frameworks, and hosting.
 
 ## The Techniques
@@ -62,7 +62,7 @@ The best number of fonts for your site is one, maybe two.
 
 [Google Fonts](https://fonts.google.com) is your friend.
 Only add the styles and weights you need.
-Make sure you don't miss any, because browser generated bold and italics are awful.
+Make sure you don't miss any, because browser-generated bold and italics are awful.
 Use the `<link>` method of embedding.
 
 ### HTML Living Standard
