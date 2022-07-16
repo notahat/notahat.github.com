@@ -21,7 +21,7 @@ description: TODO write a description
           <a href="{{ post.url }}">{{ post.title }}</a>
           <time
             class="articles__date"
-            datetime="{{ page.date | date: '%Y-%m-%d' }}"
+            datetime="{{ post.date | date: '%Y-%m-%d' }}"
           >
             {{ post.date | date_to_long_string: "ordinal", "US" }}
           </time>
