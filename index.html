@@ -32,6 +32,10 @@ description: Pete Yandell is an experienced Principal Software Engineer and Arch
         line-height: 1.75rem;
       }
 
+      p {
+        margin: 0 0 1.25rem 0;
+      }
+
       a {
         color: white;
       }
@@ -40,37 +44,31 @@ description: Pete Yandell is an experienced Principal Software Engineer and Arch
         color: #aaa;
       }
 
-      h1,
-      h2 {
-        font-family: "Quattrocento Sans", sans-serif;
-        font-weight: 400;
-        margin: 0;
+      .main {
+        margin: 0 0 2rem 0;
       }
 
-      h1 {
+      .main__name {
+        margin: 0;
+        font-family: "Quattrocento Sans", sans-serif;
+        font-weight: 400;
         font-size: 36px;
         line-height: 41px;
       }
 
-      h2 {
-        margin-bottom: 28px;
+      .main__job-title {
+        margin: 0 0 28px 0;
+        font-family: "Quattrocento Sans", sans-serif;
+        font-weight: 400;
         font-size: 28px;
       }
 
-      p {
-        margin: 0 0 1.25rem 0;
-      }
-
-      main {
-        margin: 0 0 2rem 0;
-      }
-
-      nav {
+      .nav {
         display: flex;
         gap: 8px;
       }
 
-      nav a {
+      .nav__link {
         border-radius: 4px;
         padding: 4px;
         width: 24px;
@@ -79,7 +77,7 @@ description: Pete Yandell is an experienced Principal Software Engineer and Arch
         color: #242424;
       }
 
-      nav a:hover {
+      .nav__link:hover {
         background: #aaa;
         color: #242424;
       }
@@ -87,10 +85,10 @@ description: Pete Yandell is an experienced Principal Software Engineer and Arch
   </head>
 
   <body>
-    <main>
+    <main class="main">
       <hgroup>
-        <h1>Pete Yandell</h1>
-        <h2>Principal Engineer / Architect</h2>
+        <h1 class="main__name">Pete Yandell</h1>
+        <h2 class="main__job-title">Principal Engineer / Architect</h2>
       </hgroup>
 
       <p>
@@ -121,8 +119,12 @@ description: Pete Yandell is an experienced Principal Software Engineer and Arch
       </p>
     </main>
 
-    <nav>
-      <a href="https://www.linkedin.com/in/notahat/" aria-label="LinkedIn">
+    <nav class="nav">
+      <a
+        class="nav__link"
+        href="https://www.linkedin.com/in/notahat/"
+        aria-label="LinkedIn"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
@@ -137,7 +139,7 @@ description: Pete Yandell is an experienced Principal Software Engineer and Arch
         </svg>
       </a>
 
-      <a href="mailto:hello@notahat.com" aria-label="Email">
+      <a class="nav__link" href="mailto:hello@notahat.com" aria-label="Email">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
@@ -152,7 +154,11 @@ description: Pete Yandell is an experienced Principal Software Engineer and Arch
         </svg>
       </a>
 
-      <a href="https://twitter.com/notahat" aria-label="Twitter">
+      <a
+        class="nav__link"
+        href="https://twitter.com/notahat"
+        aria-label="Twitter"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
@@ -167,7 +173,11 @@ description: Pete Yandell is an experienced Principal Software Engineer and Arch
         </svg>
       </a>
 
-      <a href="https://github.com/notahat" aria-label="GitHub">
+      <a
+        class="nav__link"
+        href="https://github.com/notahat"
+        aria-label="GitHub"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
