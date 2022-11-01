@@ -13,3 +13,4 @@ plugins:
 
 exclude:
 - README.md
+- start.sh
