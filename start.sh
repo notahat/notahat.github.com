@@ -1,2 +1,2 @@
 #!/bin/sh
-bundle exec jekyll serve --drafts --incremental --open-url
+bundle exec jekyll serve --drafts --open-url --livereload
