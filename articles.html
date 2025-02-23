@@ -3,12 +3,12 @@ title: Articles
 description: TODO write a description
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   {% include article-head.html %}
 
   <body>
-    <nav class="site-nav"><a href="/">About me</a></nav>
+    <nav class="site-nav"><a class="site-nav__link" href="/">About me</a></nav>
 
     <main class="articles">
       <h1 class="articles__heading">Articles</h1>
@@ -18,7 +18,7 @@ description: TODO write a description
       <ul class="articles__list">
         {% for post in site.posts %}
         <li class="articles__row">
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          <a class="articles__link" href="{{ post.url }}">{{ post.title }}</a>
           <time
             class="articles__date"
             datetime="{{ post.date | date: '%Y-%m-%d' }}"

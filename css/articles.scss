@@ -4,7 +4,6 @@
 // ----------------------------------------------------------------------
 // Shared stuff
 
-
 $page-width: 576px;
 
 // Below this size, we shrink the page margins.
@@ -53,6 +52,14 @@ a {
   @include sans-font;
 }
 
+.site-nav__link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // ----------------------------------------------------------------------
 // Articles page
 
@@ -72,6 +79,14 @@ a {
 .articles__intro {
   margin: 0 0 2.5rem 0;
   text-align: center;
+}
+
+.articles__link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .articles__list {
@@ -151,7 +166,7 @@ a {
 
   ul {
     padding-left: 1.5rem;
-    list-style-type: '—';
+    list-style-type: "—";
   }
 
   li {
