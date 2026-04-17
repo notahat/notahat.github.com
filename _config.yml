@@ -9,8 +9,10 @@ permalink: /:categories/:year/:month/:title
 timezone: Australia/Melbourne
 
 plugins:
-- jekyll-gist
+  - jekyll-gist
 
 exclude:
-- README.md
-- start.sh
+  - mise.toml
+  - README.md
+  - start.sh
+  - tools/
