@@ -207,8 +207,13 @@ a {
 
   hr {
     border: none;
-    border-top: 1px solid #ccc;
     margin: 1.5rem 0;
+    text-align: center;
+
+    &::after {
+      content: '✦';
+      color: #ccc;
+    }
   }
 
   .conversation {

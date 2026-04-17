@@ -6,6 +6,8 @@ layout: article
 
 Last night, I was using Claude to help me put together some guidelines on writing good code. That got me wondering if those guidelines would help LLMs too, so I thought I'd ask. From there, the conversation got fascinatingly existential.
 
+---
+
 <div class="conversation" markdown="1">
 
 > **Me:** Do you think the things that make code understandable for you and understandable for humans are different? If so, in what ways?
