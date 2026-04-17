@@ -199,6 +199,12 @@ a {
     line-height: 1;
   }
 
+  blockquote {
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 2px solid #ccc;
+  }
+
   hr {
     border: none;
     border-top: 1px solid #ccc;
@@ -208,7 +214,9 @@ a {
   .conversation {
     margin: 1.5rem 0;
 
-    p + p {
+    p + p,
+    p + blockquote,
+    blockquote + p {
       text-indent: 0;
       margin-top: 1rem;
     }
