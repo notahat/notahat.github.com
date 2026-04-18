@@ -16,3 +16,4 @@ exclude:
   - README.md
   - start.sh
   - tools/
+  - vendor/
