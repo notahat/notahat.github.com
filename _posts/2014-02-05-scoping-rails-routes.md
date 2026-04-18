@@ -4,28 +4,29 @@ description: How to use namespace and scope in Rails routes.
 layout: article
 ---
 
-I always forget how `namespace` and `scope` in the Rails routes file affect the controller names, URIs, and named routes.
+I always forget how `namespace` and `scope` in the Rails routes file affect the
+controller names, URIs, and named routes.
 
 ## Scope
 
 The `scope` method gives you fine-grained control:
 
-{% highlight ruby %}
+```ruby
 scope 'url_path_prefix',
   module: 'module_prefix',
   as: 'named_route_prefix'
 do
   resources :posts
 end
-{% endhighlight %}
+```
 
 For example:
 
-{% highlight ruby %}
+```ruby
 scope 'foo', module: 'bar', as: 'baz' do
   resources :posts
 end
-{% endhighlight %}
+```
 
 produces these routes:
 
@@ -44,11 +45,11 @@ produces these routes:
 
 The `namespace` method is the simple case --- it prefixes everything.
 
-{% highlight ruby %}
+```ruby
 namespace :foo do
   resources :posts
 end
-{% endhighlight %}
+```
 
 produces:
 
@@ -63,4 +64,6 @@ produces:
                   PUT    /foo/posts/:id(.:format)      foo/posts#update
                   DELETE /foo/posts/:id(.:format)      foo/posts#destroy
 
-See [Controller Namespaces and Routing](http://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing) in the Rails Routing guide for more details.
+See
+[Controller Namespaces and Routing](http://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing)
+in the Rails Routing guide for more details.
