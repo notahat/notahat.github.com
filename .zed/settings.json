@@ -1,7 +1,9 @@
 {
+  "file_types": {
+    "Plain Text": ["css/articles.scss"]
+  },
   "languages": {
     "SCSS": {
-      "language_servers": [],
       "formatter": {
         "external": {
           "command": "node_modules/.bin/prettier",

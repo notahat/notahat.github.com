@@ -1,0 +1,233 @@
+// ----------------------------------------------------------------------
+// Shared stuff
+
+$page-width: 576px;
+
+// Below this size, we shrink the page margins.
+// 450px is a little bigger than the iPhone 13 Pro width of 428px.
+$page-margin-breakpoint: 450px;
+
+@mixin serif-font {
+  font-family: "EB Garamond", serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@mixin sans-font {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+html {
+  background-color: white;
+  color: black;
+  @include serif-font;
+}
+
+body {
+  margin: 1rem 1rem 3rem;
+
+  @media (min-width: $page-margin-breakpoint) {
+    margin: 2rem 2rem 8rem;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-color: #999;
+
+  &:hover {
+    color: #4588bb;
+    text-decoration-color: currentcolor;
+  }
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  @include sans-font;
+}
+
+.site-nav__link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ----------------------------------------------------------------------
+// Articles page
+
+.articles {
+  margin: 2rem auto;
+  max-width: $page-width;
+}
+
+.articles__heading {
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  font-size: 42px;
+  font-weight: inherit;
+  text-align: center;
+}
+
+.articles__intro {
+  margin: 0 0 2.5rem 0;
+  text-align: center;
+}
+
+.articles__link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.articles__list {
+  margin: 0;
+  padding: 0;
+}
+
+.articles__row {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.articles__date {
+  flex-shrink: 0;
+  @include sans-font;
+}
+
+// ----------------------------------------------------------------------
+// Article pages
+
+.article__header {
+  margin: 0 0 3rem;
+}
+
+.article__headline {
+  margin: 0 0 0.8rem;
+  text-align: center;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.article__date {
+  display: block;
+  @include sans-font;
+  text-align: center;
+}
+
+.article {
+  margin: 2rem auto;
+  max-width: $page-width;
+
+  // We're using nesting rather than BEM here, coz these tags are all generated from Markdown.
+
+  h2 {
+    margin: 1rlh 0 0.5rlh;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: inherit;
+    text-align: center;
+  }
+
+  h3 {
+    margin: 1rlh 0 0.5rlh;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 600;
+
+    + p {
+      text-indent: 1rlh;
+    }
+  }
+
+  p {
+    margin: 0;
+    text-align: justify;
+    hyphens: auto;
+    text-wrap: pretty;
+
+    + p {
+      text-indent: 1rlh;
+    }
+  }
+
+  ul {
+    padding-left: 1rlh;
+    list-style-type: "—";
+  }
+
+  li {
+    line-height: inherit;
+  }
+
+  figure.highlight,
+  div.highlight {
+    margin: 1rem -1rem;
+    padding: 0.3rem 1rem 0.5rem;
+    overflow-x: auto;
+    background-color: #f6f6f6;
+
+    @media (min-width: $page-margin-breakpoint) {
+      margin: 1rem -2rem;
+      padding: 0.3rem 2rem 0.5rem;
+    }
+
+    pre {
+      margin: 0;
+      padding: 0;
+      line-height: normal;
+    }
+  }
+
+  code {
+    font-family: Menlo, monospace;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  blockquote {
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 2px solid #ccc;
+  }
+
+  hr {
+    border: none;
+    margin: 1rlh 0;
+    text-align: center;
+
+    &::after {
+      content: "✦";
+      color: #ccc;
+    }
+  }
+
+  .conversation {
+    margin: 1rlh 0;
+
+    p + p,
+    p + blockquote,
+    blockquote + p {
+      text-indent: 0;
+      margin-top: 0.75rlh;
+    }
+  }
+
+  div.gist {
+    margin: 1rlh 0;
+  }
+}
