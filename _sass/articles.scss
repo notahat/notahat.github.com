@@ -3,6 +3,26 @@
 
 $page-width: 576px;
 
+:root {
+  --color-bg: white;
+  --color-text: black;
+  --color-link-decoration: #999;
+  --color-link-hover: #4588bb;
+  --color-code-bg: #f6f6f6;
+  --color-border: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1a1a1a;
+    --color-text: #e0e0e0;
+    --color-link-decoration: #666;
+    --color-link-hover: #6aabdc;
+    --color-code-bg: #2a2a2a;
+    --color-border: #555;
+  }
+}
+
 // Below this size, we shrink the page margins.
 // 450px is a little bigger than the iPhone 13 Pro width of 428px.
 $page-margin-breakpoint: 450px;
@@ -22,8 +42,8 @@ $page-margin-breakpoint: 450px;
 }
 
 html {
-  background-color: white;
-  color: black;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   @include serif-font;
 }
 
@@ -37,10 +57,10 @@ body {
 
 a {
   color: inherit;
-  text-decoration-color: #999;
+  text-decoration-color: var(--color-link-decoration);
 
   &:hover {
-    color: #4588bb;
+    color: var(--color-link-hover);
     text-decoration-color: currentcolor;
   }
 }
@@ -179,7 +199,7 @@ a {
     margin: 1rem -1rem;
     padding: 0.3rem 1rem 0.5rem;
     overflow-x: auto;
-    background-color: #f6f6f6;
+    background-color: var(--color-code-bg);
 
     @media (min-width: $page-margin-breakpoint) {
       margin: 1rem -2rem;
@@ -202,7 +222,7 @@ a {
   blockquote {
     margin: 0;
     padding-left: 1rem;
-    border-left: 2px solid #ccc;
+    border-left: 2px solid var(--color-border);
   }
 
   hr {
@@ -212,7 +232,7 @@ a {
 
     &::after {
       content: "✦";
-      color: #ccc;
+      color: var(--color-border);
     }
   }
 
