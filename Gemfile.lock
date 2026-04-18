@@ -307,7 +307,6 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  csv
   github-pages
   webrick
 
