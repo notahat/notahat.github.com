@@ -14,20 +14,20 @@ $page-margin-breakpoint: 450px;
   font-family: "EB Garamond", serif;
   font-size: 21px;
   font-weight: 400;
+  line-height: 1.6;
 }
 
 @mixin sans-font {
   font-family: "Quattrocento Sans", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
+  line-height: normal;
 }
 
 html {
   background-color: white;
   color: black;
   @include serif-font;
-
-
 }
 
 body {
@@ -123,6 +123,7 @@ a {
   font-family: inherit;
   font-size: 2rem;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .article__date {
@@ -138,7 +139,7 @@ a {
   // We're using nesting rather than BEM here, coz these tags are all generated from Markdown.
 
   h2 {
-    margin: 2rem 0 1rem;
+    margin: 1rlh 0 0.5rlh;
     font-family: inherit;
     font-size: 1.3rem;
     font-weight: inherit;
@@ -146,35 +147,34 @@ a {
   }
 
   h3 {
-    margin: 2rem 0 1rem;
+    margin: 1rlh 0 0.5rlh;
     font-size: 1rem;
     font-family: inherit;
     font-weight: 700;
 
     + p {
-      text-indent: 1.5rem;
+      text-indent: 1rlh;
     }
   }
 
   p {
     margin: 0;
     text-align: justify;
-    line-height: 1.5;
     hyphens: auto;
     text-wrap: pretty;
 
     + p {
-      text-indent: 1.5rem;
+      text-indent: 1rlh;
     }
   }
 
   ul {
-    padding-left: 1.5rem;
+    padding-left: 1rlh;
     list-style-type: "—";
   }
 
   li {
-    line-height: 1.5;
+    line-height: inherit;
   }
 
   figure.highlight,
@@ -192,6 +192,7 @@ a {
     pre {
       margin: 0;
       padding: 0;
+      line-height: normal;
     }
   }
 
@@ -209,28 +210,28 @@ a {
 
   hr {
     border: none;
-    margin: 1.5rem 0;
+    margin: 1rlh 0;
     text-align: center;
 
     &::after {
-      content: '✦';
+      content: "✦";
       color: #ccc;
     }
   }
 
   .conversation {
-    margin: 1.5rem 0;
+    margin: 1rlh 0;
 
     p + p,
     p + blockquote,
     blockquote + p {
       text-indent: 0;
-      margin-top: 1rem;
+      margin-top: 0.75rlh;
     }
   }
 
   div.gist {
-    margin: 1.5rem 0;
+    margin: 1rlh 0;
   }
 }
 
