@@ -1,9 +1,11 @@
-// Generated from pygments with:
+// Light mode colors generated from pygments with:
 //
 //   pygmentize -f html -S xcode
 //
 // See https://pygments.org/styles/ for possible styles.
 // Note that only a few of them are WCAG compliant.
+//
+// Dark mode colors are hand-tuned lightened equivalents of the xcode palette.
 
 .highlight {
   /* Comment */
@@ -309,5 +311,59 @@
   /* Literal.Number.Integer.Long */
   .il {
     color: #1c01ce;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    /* Comment */
+    .c, .ch, .cm, .cpf, .c1, .cs {
+      color: #6aab5f;
+    }
+
+    /* Comment.Preproc */
+    .cp {
+      color: #ce9178;
+    }
+
+    /* Error, Name.* (default text) */
+    .err, .n, .o, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .ow, .fm, .vc, .vg, .vi, .vm {
+      color: #e0e0e0;
+    }
+
+    /* Keyword.* */
+    .k, .kc, .kd, .kn, .kp, .kr, .kt, .nb {
+      color: #da8fda;
+    }
+
+    /* Literal, Literal.Number.* */
+    .l, .ld, .m, .mb, .mf, .mh, .mi, .mo, .il {
+      color: #7c9fff;
+    }
+
+    /* Literal.String.* */
+    .s, .sa, .sb, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+      color: #e08080;
+    }
+
+    /* Literal.String.Char */
+    .sc {
+      color: #9ba8ff;
+    }
+
+    /* Name.Attribute */
+    .na {
+      color: #c8a84b;
+    }
+
+    /* Name.Class */
+    .nc {
+      color: #4ec9b0;
+    }
+
+    /* Name.Builtin.Pseudo */
+    .bp {
+      color: #c678dd;
+    }
   }
 }
