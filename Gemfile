@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'github-pages'
+gem 'jekyll', '~> 4.4'
+
+group :jekyll_plugins do
+  gem 'jekyll-gist'
+end
+
 group :development do
   gem 'webrick'
 end

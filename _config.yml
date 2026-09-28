@@ -1,6 +1,6 @@
-# Remember that GitHub enforces some settings that we shouldn't override in here. See:
-#
-# https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#configuring-jekyll-in-your-github-pages-site
+# The site is built by the GitHub Actions workflow in .github/workflows, not by
+# the classic GitHub Pages build, so none of these settings are overridden by
+# GitHub.
 
 safe: false
 
@@ -10,6 +10,9 @@ timezone: Australia/Melbourne
 
 plugins:
   - jekyll-gist
+
+sass:
+  sourcemap: never
 
 exclude:
   - mise.toml
